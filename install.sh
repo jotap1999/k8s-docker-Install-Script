@@ -45,3 +45,5 @@ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/
 sudo apt-get update
 apt -y install kubeadm kubelet kubectl
 systemctl enable kubelet
+
+apt-get -y install linux-image-$(uname -r)
