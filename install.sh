@@ -47,3 +47,6 @@ apt -y install kubeadm kubelet kubectl
 systemctl enable kubelet
 
 apt-get -y install linux-image-$(uname -r)
+
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+kubectl completion bash >/etc/bash_completion.d/kubectl
